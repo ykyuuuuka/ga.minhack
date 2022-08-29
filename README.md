@@ -1,0 +1,1 @@
+# ga.minhack
