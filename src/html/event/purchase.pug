@@ -1,0 +1,61 @@
+- var event_type = 'purchase'
+
+doctype html
+htlm(lang='ja')
+	head
+		title #{event_type}
+		include ../head.pug
+	body
+		include ../body_head.pug
+		.container
+				form(name='form')
+					.cnt-code
+						.row
+							.col-12.pb-3 dataLayer.push({
+							.col-12.pb-3 　　　event: #{event_type},
+						.row.align-items-center.pb-3
+							.col-auto 　　　currency:
+							.col-auto.ps-0
+								input.form-control(name='value1' value='JPY')
+							.col-auto ,
+						.row.align-items-center.pb-3
+							.col-auto 　　　transaction_id:
+							.col-auto.ps-0
+								input.form-control(name='value2' value='')
+							.col-auto ,
+							.col-12.fs-min 　　　　　※初期値では乱数が入ります。いじらないでも正常計測します
+						.row.align-items-center.pb-3
+							.col-auto 　　　value:
+							.col-auto.ps-0
+								input.form-control(name='value3' value='123')
+							.col-auto ,
+						.row.align-items-center.pb-3
+							.col-auto 　　　affiliation:
+							.col-auto.ps-0
+								input.form-control(name='value4' value='Google Store')
+							.col-auto ,
+						.row.align-items-center.pb-3
+							.col-auto 　　　coupon:
+							.col-auto.ps-0
+								input.form-control(name='value5' value='閉店セール')
+							.col-auto ,
+						.row.align-items-center.pb-3
+							.col-auto 　　　shipping:
+							.col-auto.ps-0
+								input.form-control(name='value6' value='0')
+							.col-auto ,
+						.row.align-items-center.pb-3
+							.col-auto 　　　tax:
+							.col-auto.ps-0
+								input.form-control(name='value7' value='1')
+							.col-auto ,
+						.row.align-items-center
+							.col-auto 　　　items:
+							.col-auto.ps-0
+								input.form-control(name='value8' value='スニーカー')
+						.row
+							.col-12.pb-3 });
+							.col-3.d-grid
+								p.m-0.btn.btn-primary(data-js=event_type) submit
+						include ../submit_success.pug						
+		include ../event_menu.pug

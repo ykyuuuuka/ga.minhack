@@ -1,3 +1,23 @@
+.fs-7 {
+    font-size: 0.8rem!important;
+}
+.fs-min {
+	font-size: 0.6rem!important;
+}
 .cnt-code {
-	margin: 20px 0 0 0;
+	position: relative;
+	padding: 20px;
+	margin: 40px 0 40px 0;
+	background-color: #f8f9fa;
+}
+#submit_success {
+	background-color: #3aa5ab;
+	color: #FFFFFF;
+	position: absolute;
+	bottom: -18px;
+	left: 0;
+	font-size: 12px;
+	width: 100%;
+	opacity: 0;
+	transition: opacity 3s;
 }

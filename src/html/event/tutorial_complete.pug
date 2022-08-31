@@ -1,4 +1,4 @@
-- var event_type = 'join_group'
+- var event_type = 'tutorial_complete'
 
 doctype html
 htlm(lang='ja')
@@ -12,14 +12,10 @@ htlm(lang='ja')
 					.cnt-code
 						.row
 							.col-12.pb-3 dataLayer.push({
-							.col-12.pb-3 　　　event: #{event_type},
-						.row.align-items-center
-							.col-auto 　　　group_id:
-							.col-auto.ps-0
-								input.form-control(name='value' value='123')
+							.col-12.pb-3 　　　event: #{event_type}
 						.row
 							.col-12.pb-3 });
 							.col-3.d-grid
 								p.m-0.btn.btn-primary(data-js=event_type) submit
-						include ../submit_success.pug						
+						include ../submit_success.pug
 		include ../event_menu.pug

@@ -1,4 +1,4 @@
-- var event_type = 'join_group'
+- var event_type = 'select_content'
 
 doctype html
 htlm(lang='ja')
@@ -13,10 +13,15 @@ htlm(lang='ja')
 						.row
 							.col-12.pb-3 dataLayer.push({
 							.col-12.pb-3 　　　event: #{event_type},
-						.row.align-items-center
-							.col-auto 　　　group_id:
+						.row.align-items-center.pb-3
+							.col-auto 　　　content_type:
 							.col-auto.ps-0
-								input.form-control(name='value' value='123')
+								input.form-control(name='value1' value='123')
+							.col-auto ,
+						.row.align-items-center
+							.col-auto 　　　item_id:
+							.col-auto.ps-0
+								input.form-control(name='value2' value='123')
 						.row
 							.col-12.pb-3 });
 							.col-3.d-grid

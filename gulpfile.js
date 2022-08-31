@@ -26,7 +26,7 @@ gulp.task('scss', function() {
 gulp.task('pug', function() {
 	return (
 		gulp
-			.src('src/html/**/*', {base: 'src'})
+			.src('src/html/**/*')
 			.pipe(pug({pretty: true}))
 			.pipe(gulp.dest('dest'))
 	);
@@ -37,7 +37,7 @@ gulp.task('browser-sync', function() {
 	browserSync({
 		server: {
 			baseDir: 'dest'
-			,index : 'index.html'
+			,index : '/'
 		}
 	});
 });

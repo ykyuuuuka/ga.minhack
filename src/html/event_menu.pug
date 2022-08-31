@@ -1,15 +1,263 @@
-.container.event-menu
-    .row.text-center
-        .col.p-2.d-grid
-            a.btn.btn-primary(role='button' tabindex='-1') join_group
-        .col.p-2.d-grid
-            a.btn.btn-primary(role='button' tabindex='-1') login
-        .col.p-2.d-grid
-            a.btn.btn-primary(role='button' tabindex='-1') search
-    .row.text-center
-        .col.p-2.d-grid
-            a.btn.btn-primary(role='button' tabindex='-1') selecct_content
-        .col.p-2.d-grid
-            a.btn.btn-primary(role='button' tabindex='-1') share
-        .col.p-2.d-grid
-            a.btn.btn-primary(role='button' tabindex='-1') sign_up
+.container 
+    table.table.table-striped.table-hover.fs-7
+        thead
+            tr 
+                th(scope='col') #
+                th(scope='col') event name
+                th(scope='col') event trigger
+                th(scope='col') help
+                th(scope='col') sample page
+        tbody 
+            tr 
+                - var event_name = 'join_group'
+                - var event_help_link = 'https://developers.google.com/gtagjs/reference/ga4-events?hl=ja#'+event_name
+                - var event_sample_link = '/event/'+event_name+'.html'
+                th(scope='row') 1
+                td #{event_name}
+                td ユーザーがグループに参加して、各グループの人気度が測定されたとき
+                td 
+                    a.btn-link(href=event_help_link target='_blank') link
+                td
+                    a.btn-link(href=event_sample_link) link
+            tr 
+                - var event_name = 'login'
+                - var event_help_link = 'https://developers.google.com/gtagjs/reference/ga4-events?hl=ja#'+event_name
+                - var event_sample_link = '/event/'+event_name+'.html'
+                th(scope='row') 2
+                td #{event_name}
+                td ユーザーがログインしたとき
+                td 
+                    a.btn-link(href=event_help_link target='_blank') link
+                td
+                    a.btn-link(href=event_sample_link) link
+            tr 
+                - var event_name = 'search'
+                - var event_help_link = 'https://developers.google.com/gtagjs/reference/ga4-events?hl=ja#'+event_name
+                - var event_sample_link = '/event/'+event_name+'.html'
+                th(scope='row') 3
+                td #{event_name}
+                td ユーザーがコンテンツを検索したとき
+                td 
+                    a.btn-link(href=event_help_link target='_blank') link
+                td
+                    a.btn-link(href=event_sample_link) link
+            tr 
+                - var event_name = 'select_content'
+                - var event_help_link = 'https://developers.google.com/gtagjs/reference/ga4-events?hl=ja#'+event_name
+                - var event_sample_link = '/event/'+event_name+'.html'
+                th(scope='row') 4
+                td #{event_name}
+                td ユーザーがコンテンツを選択したとき
+                td 
+                    a.btn-link(href=event_help_link target='_blank') link
+                td
+                    a.btn-link(href=event_sample_link) link
+            tr 
+                - var event_name = 'share'
+                - var event_help_link = 'https://developers.google.com/gtagjs/reference/ga4-events?hl=ja#'+event_name
+                - var event_sample_link = '/event/'+event_name+'.html'
+                th(scope='row') 5
+                td #{event_name}
+                td ユーザーがコンテンツを共有したとき
+                td 
+                    a.btn-link(href=event_help_link target='_blank') link
+                td
+                    a.btn-link(href=event_sample_link) link
+            tr 
+                - var event_name = 'sign_up'
+                - var event_help_link = 'https://developers.google.com/gtagjs/reference/ga4-events?hl=ja#'+event_name
+                - var event_sample_link = '/event/'+event_name+'.html'
+                th(scope='row') 6
+                td #{event_name}
+                td ユーザーが登録して、各登録方法の人気度が測定されたとき
+                td 
+                    a.btn-link(href=event_help_link target='_blank') link
+                td
+                    a.btn-link(href=event_sample_link) link
+            tr 
+                - var event_name = 'tutorial_begin'
+                - var event_help_link = 'https://developers.google.com/gtagjs/reference/ga4-events?hl=ja#'+event_name
+                - var event_sample_link = '/event/'+event_name+'.html'
+                th(scope='row') 7
+                td #{event_name}
+                td ユーザーがチュートリアルを開始したとき
+                td 
+                    a.btn-link(href=event_help_link target='_blank') link
+                td
+                    a.btn-link(href=event_sample_link) link
+            tr 
+                - var event_name = 'tutorial_complete'
+                - var event_help_link = 'https://developers.google.com/gtagjs/reference/ga4-events?hl=ja#'+event_name
+                - var event_sample_link = '/event/'+event_name+'.html'
+                th(scope='row') 8
+                td #{event_name}
+                td ユーザーがチュートリアルを完了したとき
+                td 
+                    a.btn-link(href=event_help_link target='_blank') link
+                td
+                    a.btn-link(href=event_sample_link) link
+            tr 
+                - var event_name = 'purchase'
+                - var event_help_link = 'https://developers.google.com/gtagjs/reference/ga4-events?hl=ja#'+event_name
+                - var event_sample_link = '/event/'+event_name+'.html'
+                th(scope='row') 9
+                td #{event_name}
+                td ユーザーが購入を完了したとき
+                td 
+                    a.btn-link(href=event_help_link target='_blank') link
+                td
+                    a.btn-link(href=event_sample_link) link
+            tr 
+                - var event_name = 'refund'
+                - var event_help_link = 'https://developers.google.com/gtagjs/reference/ga4-events?hl=ja#'+event_name
+                - var event_sample_link = '/event/'+event_name+'.html'
+                th(scope='row') 10
+                td #{event_name}
+                td ユーザーが払い戻しを受けたとき
+                td 
+                    a.btn-link(href=event_help_link target='_blank') link
+                td
+                    a.btn-link(href=event_sample_link) link
+            tr 
+                - var event_name = 'add_payment_info'
+                - var event_help_link = 'https://developers.google.com/gtagjs/reference/ga4-events?hl=ja#'+event_name
+                - var event_sample_link = '/event/'+event_name+'.html'
+                th(scope='row') 11
+                td #{event_name}
+                td ユーザーが支払い情報を送信したとき
+                td 
+                    a.btn-link(href=event_help_link target='_blank') link
+                td
+                    a.btn-link(href=event_sample_link) link
+            tr 
+                - var event_name = 'add_shipping_info'
+                - var event_help_link = 'https://developers.google.com/gtagjs/reference/ga4-events?hl=ja#'+event_name
+                - var event_sample_link = '/event/'+event_name+'.html'
+                th(scope='row') 12
+                td #{event_name}
+                td ユーザーが配送先情報を送信したとき
+                td 
+                    a.btn-link(href=event_help_link target='_blank') link
+                td
+                    a.btn-link(href=event_sample_link) link
+            tr 
+                - var event_name = 'add_to_cart'
+                - var event_help_link = 'https://developers.google.com/gtagjs/reference/ga4-events?hl=ja#'+event_name
+                - var event_sample_link = '/event/'+event_name+'.html'
+                th(scope='row') 13
+                td #{event_name}
+                td ユーザーがカートに商品を追加したとき
+                td 
+                    a.btn-link(href=event_help_link target='_blank') link
+                td
+                    a.btn-link(href=event_sample_link) link
+            tr 
+                - var event_name = 'add_to_wishlist'
+                - var event_help_link = 'https://developers.google.com/gtagjs/reference/ga4-events?hl=ja#'+event_name
+                - var event_sample_link = '/event/'+event_name+'.html'
+                th(scope='row') 14
+                td #{event_name}
+                td ユーザーがウィッシュリストに商品を追加したとき
+                td 
+                    a.btn-link(href=event_help_link target='_blank') link
+                td
+                    a.btn-link(href=event_sample_link) link
+            tr 
+                - var event_name = 'begin_checkout'
+                - var event_help_link = 'https://developers.google.com/gtagjs/reference/ga4-events?hl=ja#'+event_name
+                - var event_sample_link = '/event/'+event_name+'.html'
+                th(scope='row') 15
+                td #{event_name}
+                td ユーザーが購入手続きを開始したとき
+                td 
+                    a.btn-link(href=event_help_link target='_blank') link
+                td
+                    a.btn-link(href=event_sample_link) link
+            tr 
+                - var event_name = 'generate_lead'
+                - var event_help_link = 'https://developers.google.com/gtagjs/reference/ga4-events?hl=ja#'+event_name
+                - var event_sample_link = '/event/'+event_name+'.html'
+                th(scope='row') 16
+                td #{event_name}
+                td ユーザーが問い合わせのためにフォームまたはリクエストを送信したとき
+                td 
+                    a.btn-link(href=event_help_link target='_blank') link
+                td
+                    a.btn-link(href=event_sample_link) link
+            tr 
+                - var event_name = 'remove_from_cart'
+                - var event_help_link = 'https://developers.google.com/gtagjs/reference/ga4-events?hl=ja#'+event_name
+                - var event_sample_link = '/event/'+event_name+'.html'
+                th(scope='row') 17
+                td #{event_name}
+                td ユーザーがカートから商品を削除したとき
+                td 
+                    a.btn-link(href=event_help_link target='_blank') link
+                td
+                    a.btn-link(href=event_sample_link) link
+            tr 
+                - var event_name = 'select_item'
+                - var event_help_link = 'https://developers.google.com/gtagjs/reference/ga4-events?hl=ja#'+event_name
+                - var event_sample_link = '/event/'+event_name+'.html'
+                th(scope='row') 18
+                td #{event_name}
+                td ユーザーがリストから商品を選択したとき
+                td 
+                    a.btn-link(href=event_help_link target='_blank') link
+                td
+                    a.btn-link(href=event_sample_link) link
+            tr 
+                - var event_name = 'select_promotion'
+                - var event_help_link = 'https://developers.google.com/gtagjs/reference/ga4-events?hl=ja#'+event_name
+                - var event_sample_link = '/event/'+event_name+'.html'
+                th(scope='row') 19
+                td #{event_name}
+                td ユーザーがプロモーションを選択したとき
+                td 
+                    a.btn-link(href=event_help_link target='_blank') link
+                td
+                    a.btn-link(href=event_sample_link) link
+            tr 
+                - var event_name = 'view_cart'
+                - var event_help_link = 'https://developers.google.com/gtagjs/reference/ga4-events?hl=ja#'+event_name
+                - var event_sample_link = '/event/'+event_name+'.html'
+                th(scope='row') 20
+                td #{event_name}
+                td ユーザーがカートを表示したとき
+                td 
+                    a.btn-link(href=event_help_link target='_blank') link
+                td
+                    a.btn-link(href=event_sample_link) link
+            tr 
+                - var event_name = 'view_item'
+                - var event_help_link = 'https://developers.google.com/gtagjs/reference/ga4-events?hl=ja#'+event_name
+                - var event_sample_link = '/event/'+event_name+'.html'
+                th(scope='row') 21
+                td #{event_name}
+                td ユーザーが商品を表示したとき
+                td 
+                    a.btn-link(href=event_help_link target='_blank') link
+                td
+                    a.btn-link(href=event_sample_link) link
+            tr 
+                - var event_name = 'view_item_list'
+                - var event_help_link = 'https://developers.google.com/gtagjs/reference/ga4-events?hl=ja#'+event_name
+                - var event_sample_link = '/event/'+event_name+'.html'
+                th(scope='row') 22
+                td #{event_name}
+                td ユーザーが商品やサービスの一覧を表示したとき
+                td 
+                    a.btn-link(href=event_help_link target='_blank') link
+                td
+                    a.btn-link(href=event_sample_link) link
+            tr 
+                - var event_name = 'view_promotion'
+                - var event_help_link = 'https://developers.google.com/gtagjs/reference/ga4-events?hl=ja#'+event_name
+                - var event_sample_link = '/event/'+event_name+'.html'
+                th(scope='row') 23
+                td #{event_name}
+                td ユーザーがプロモーションを表示したとき
+                td 
+                    a.btn-link(href=event_help_link target='_blank') link
+                td
+                    a.btn-link(href=event_sample_link) link

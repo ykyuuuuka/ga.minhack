@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <htlm lang="ja">
   <head>
-    <title>home</title>
+    <title>join_group</title>
     <link rel="icon" type="image/x-icon" href="https://github.githubassets.com/favicon.ico">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css"><!-- Google Tag Manager -->
@@ -20,10 +20,10 @@
       <!-- End Google Tag Manager (noscript) -->
       <div class="container event-menu">
         <div class="row text-center">
+          <div class="col p-2 d-grid"><a class="btn btn-primary" href="/" role="button" tabindex="-1">home</a></div>
           <div class="col p-2 d-grid"><a class="btn btn-primary" href="/event/join_group.html" role="button" tabindex="-1">join_group</a></div>
           <div class="col p-2 d-grid"><a class="btn btn-primary" href="/event/login.html" role="button" tabindex="-1">login</a></div>
           <div class="col p-2 d-grid"><a class="btn btn-primary" href="/event/search.html" role="button" tabindex="-1">search</a></div>
-          <div class="col p-2 d-grid"><a class="btn btn-primary" href="/event/selecct_content.html" role="button" tabindex="-1">selecct_content</a></div>
         </div>
         <div class="row text-center">
           <div class="col p-2 d-grid"><a class="btn btn-primary" href="/event/selecct_content.html" role="button" tabindex="-1">selecct_content</a></div>
@@ -33,8 +33,8 @@
         </div>
         <div class="row text-center">
           <div class="col p-2 d-grid"><a class="btn btn-primary" href="/event/tutorial_complete.html" role="button" tabindex="-1">tutorial_complete</a></div>
-          <div class="col p-2 d-grid"><a class="btn btn-primary" href="/event/add_payment_ino.html" role="button" tabindex="-1">add_payment_ino</a></div>
-          <div class="col p-2 d-grid"><a class="btn btn-primary" href="/event/add_shipping_ino.html" role="button" tabindex="-1">add_shipping_ino</a></div>
+          <div class="col p-2 d-grid"><a class="btn btn-primary" href="/event/add_payment_info.html" role="button" tabindex="-1">add_payment_info</a></div>
+          <div class="col p-2 d-grid"><a class="btn btn-primary" href="/event/add_shipping_info.html" role="button" tabindex="-1">add_shipping_info</a></div>
           <div class="col p-2 d-grid"><a class="btn btn-primary" href="/event/purchase.html" role="button" tabindex="-1">purchase</a></div>
         </div>
         <div class="row text-center">
@@ -60,5 +60,12 @@
         <pre><code>dataLeyer.push</code></pre>
       </div>
     </div>
+    <script>
+       document.addEventListener('DOMContentLoaded', function() {
+      	dataLayer.push({
+      		event: 'test'
+      	});
+      });
+    </script>
   </body>
 </htlm>
