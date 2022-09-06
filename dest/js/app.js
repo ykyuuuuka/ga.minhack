@@ -93,7 +93,6 @@ function submit_purchase() {
     let value5 = el_form.value5.value;
     let value6 = el_form.value6.value;
     let value7 = el_form.value7.value;
-    let value8 = el_form.value8.value;
 
     dataLayer.push({
         event: 'purchase',
@@ -103,8 +102,7 @@ function submit_purchase() {
         affiliation: value4,
         coupon: value5,
         shipping: value6,
-        tax: value7,
-        items: value8
+        tax: value7
     });
     submit_success();
     set_randam_num();
