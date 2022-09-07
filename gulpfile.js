@@ -27,7 +27,12 @@ gulp.task('pug', function() {
 	return (
 		gulp
 			.src('src/html/**/*')
-			.pipe(pug({pretty: true}))
+			.pipe(pug(
+				{
+					pretty: true,
+					basedir: 'src/html'
+				}
+			))
 			.pipe(gulp.dest('dest'))
 	);
 });
